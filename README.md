@@ -1,10 +1,10 @@
-# 🕵️ DeepFake Detector
+# DeepFake Detector
 
 A mobile app + REST API that detects whether an image is **real or AI-generated / deepfaked**, using a pretrained EfficientNetB0 model fine-tuned on 140k real-vs-fake faces.
 
 ---
 
-## 📱 Demo
+## Demo
 
 | Home Screen | Result — Real | Result — AI Generated |
 |:-----------:|:-------------:|:---------------------:|
@@ -12,7 +12,7 @@ A mobile app + REST API that detects whether an image is **real or AI-generated 
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 deepfake-detector/
@@ -38,17 +38,17 @@ deepfake-detector/
 
 ---
 
-## ✨ Features
+##  Features
 
-- 🖼️ **AI Image Detection** — detect GAN/diffusion-generated images  
-- 👤 **Deepfake Detection** — face-crop + classify with Haar cascade + Xception  
-- 🎬 **AI Video Detection** — frame-sampling pipeline (optional)  
-- 📊 Confidence score + AI probability bar on result screen  
-- ⚡ FastAPI backend with CORS enabled for mobile  
+-  **AI Image Detection** — detect GAN/diffusion-generated images  
+-  **Deepfake Detection** — face-crop + classify with Haar cascade + Xception  
+-  **AI Video Detection** — frame-sampling pipeline (optional)  
+-  Confidence score + AI probability bar on result screen  
+-  FastAPI backend with CORS enabled for mobile  
 
 ---
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Option A — Docker (recommended)
 
@@ -113,7 +113,7 @@ Then scan the QR code with the **Expo Go** app on your phone.
 
 ---
 
-## 🧠 Model Weights
+##  Model Weights
 
 The trained `.h5` model files are **not included** in this repository (they are large binary files). You have two options:
 
@@ -128,7 +128,7 @@ If no `.h5` file is found, the backend automatically falls back to a **pretraine
 
 ---
 
-## 📡 API Reference
+##  API Reference
 
 Base URL: `http://localhost:8000/api/v1`
 
@@ -171,7 +171,7 @@ curl -X POST http://localhost:8000/api/v1/detect/image \
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 | Layer | Technology |
 |-------|-----------|
@@ -183,7 +183,7 @@ curl -X POST http://localhost:8000/api/v1/detect/image \
 
 ---
 
-## 📂 Project Configuration
+##  Project Configuration
 
 | File | Purpose |
 |------|---------|
@@ -199,6 +199,6 @@ DEEPFAKE_THRESHOLD: float = 0.5   # above this → DEEPFAKE
 
 ---
 
-## 📄 License
+## License
 
 MIT — see [LICENSE](LICENSE) for details.
