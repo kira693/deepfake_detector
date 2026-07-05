@@ -1,0 +1,42 @@
+# ── Python ────────────────────────────────────────────────────────────────────
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+.Python
+
+# ── Datasets & large files ────────────────────────────────────────────────────
+datasets/
+datasets2/
+
+# ── Model weights (large binaries — download separately) ─────────────────────
+models/weights/*.h5
+models/weights/*.pt
+models/weights/*.bin
+models/weights/*.onnx
+# keep the directory itself
+!models/weights/.gitkeep
+
+# ── Environment & secrets ─────────────────────────────────────────────────────
+.env
+*.env.*
+
+# ── IDE / Speckit metadata ───────────────────────────────────────────────────
+.specify/
+.code-review-graph/
+.gemini/
+.vscode/
+
+# ── Expo / React Native ───────────────────────────────────────────────────────
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/.env
+
+# ── OS ────────────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db

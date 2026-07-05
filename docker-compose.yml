@@ -1,0 +1,26 @@
+version: "3.9"
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: deepfake-detector-api
+    ports:
+      - "8000:8000"
+    volumes:
+      # Mount your trained model weights into the container
+      # Place your .h5 files in ./models/weights/ on the host
+      - ./models/weights:/models/weights:ro
+    environment:
+      - IMAGE_MODEL_PATH=/models/weights/image_detector.h5
+      - VIDEO_MODEL_PATH=/models/weights/video_detector.h5
+      - DEEPFAKE_MODEL_PATH=/models/weights/deepfake_detector.h5
+      - DEBUG=false
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/v1/health')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
