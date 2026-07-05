@@ -8,7 +8,7 @@ A mobile app + REST API that detects whether an image is **real or AI-generated 
 
 | Home Screen | Result — Real | Result — AI Generated |
 |:-----------:|:-------------:|:---------------------:|
-| Pick detection type and upload from gallery | Green ✓ verdict with confidence bar | Orange ⚠ verdict with AI probability |
+| Pick detection type and upload from gallery | Green-verdict with confidence bar | Orange- verdict with AI probability |
 
 ---
 
